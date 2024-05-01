@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      font-family: 'Poppins';
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .con {
+      background-image: url(./images/bg-hero-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: hsl(193, 100%, 96%);
+    }
+
+    .btn {
+      background-color: white;
+      width: 150px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 20px;
+      border: none;
+      box-shadow: 2px 2px 2px 2px hsl(208, 11%, 55%);
+      padding: 10px;
+
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 10px 0;
+    }
+
+    .main {
+      width: 100%;
+    }
+
+    .main-1 {
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .grow {
+      box-shadow: 2px 2px 2px 2px hsl(208, 11%, 55%);
+      padding: 2rem;
+      margin: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .man {
+      margin: 0 20px;
+    }
+
+    .flow {
+      box-shadow: 2px 2px 2px 2px hsl(208, 11%, 55%);
+      padding: 2rem;
+      margin: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .your {
+      box-shadow: 2px 2px 2px 2px hsl(208, 11%, 55%);
+      padding: 2rem;
+      margin: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-1 {
+      width: 270px;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      border: none;
+      padding: 10px;
+      background-color: hsl(322, 100%, 66%);
+    }
+
+    .card {
+      display: flex;
+      box-shadow: 2px 2px 2px 2px hsl(208, 11%, 55%);
+      padding: 2rem;
+      background-color: white;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 1;
+      margin-bottom: -60px;
+      align-items: center;
+    }
+    .ion {
+      width: 55px;
+      padding: 10px;
+      font-size: 25px;
+      color: white;
+      background-color: transparent;
+      border-radius: 100%;
+      border: 1px solid white;
+      margin: 0 10px;
+    }
+    .btnn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      
+    }
+
+    .car {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fle {
+      display: flex;
+      align-items: center;
+    }
+    .whi {
+      color: white;
+      margin: 10px 20px;
+    }
+
+    .footer {
+      background-color: hsl(192, 100%, 9%);
+      display: flex;
+      padding: 3rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .whi:hover {
+      transition: all 0.35s;
+      text-decoration: underline;
+    }
+    .btn-1:hover {
+      background-color: hsl(322, 100%, 77%);
+      transition: all 0.35s;
+    }
+    .ion:hover {
+      transition: all 0.35s;
+      color: hsl(322, 100%, 66%);
+      border: 1px solid hsl(322, 100%, 66%);
+    }
+    .mann {
+      width: 30%;
+    }
+    @media (max-width:999px) {
+      .main-1 {
+        flex-direction: column;
+      }
+      .your {
+        flex-direction: column;
+      }
+      .flow {
+        flex-direction: column;
+      }
+      .grow {
+        flex-direction: column;
+      }
+      h1, p, h2 {
+        text-align: center;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        flex-direction: column;
+      }
+      .mann {
+        width: 100%;
+      }
+      .main {
+        margin-top: 30px;
+      }
+      .ion {
+        flex-direction: column;
+      }
+    }
+    @media (max-width:500px) {
+      .card {
+        width: 100%;
+        margin: 10px 20px;
+      }
+      .log {
+        width: 70%;
+      }
+      .btn {
+        width: 130px;
+      }
+      .btn-1 {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="con">
+      <div class="header">
+        <div class="logo">
+          <img class="log" src="./images/logo.svg" alt="">
+        </div>
+        <div class="btn">Try It Free</div>
+      </div>
+      <div class="main-1">
+        <div class="man">
+          <h2>Build The Community Your Fans Will Love</h2>
+          <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+            Create connections with your users as you engage in genuine discussion. </p>
+          <button class="btn-1">Get Started For Free</button>
+        </div>
+        <div class="man">
+          <img class="main" src="./images/illustration-mockups.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="grow">
+      <div class="man">
+        <h2>Grow Together</h2>
+        <p>Generate meaningful discussions with your audience and build a strong, loyal community.
+          Think of the insightful conversations you miss out on with a feedback form.</p>
+      </div>
+      <div class="man">
+        <img class="main" src="./images/illustration-grow-together.svg" alt="">
+      </div>
+    </div>
+    <div class="flow">
+      <div class="man">
+        <img class="main" src="./images/illustration-flowing-conversation.svg" alt="">
+      </div>
+      <div class="man">
+        <h2>Flow conversations </h2>
+        <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads
+          have just-in-time loading for a more natural flow.</p>
+      </div>
+    </div>
+    <div class="your">
+      <div class="man">
+        <h2>Your Users</h2>
+        <p>It takes no time at all to integrate Huddle with your app's authentication solution.
+          This means, once signed in to your app, your users can start chatting immediately.</p>
+      </div>
+      <div class="man">
+        <img class="main" src="./images/illustration-your-users.svg" alt="">
+      </div>
+    </div>
+    <div class="car">
+      <div class="card">
+        <h2>Ready To Build Your Community?</h2>
+        <button class="btn-1">Get Started For Free</button>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="mann">
+        <img src="./images/logo.svg" alt="">
+        <div class="fle">
+          <img src="./images/icon-location.svg" alt="">
+          <p class="whi">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua</p>
+          </div>
+          <div class="fle">
+                  <img src="./images/icon-phone.svg" alt="">
+                  <p class="whi">+1-543-123-4567</p>
+                </div>
+                <div class="fle">
+                  <img src="./images/icon-email.svg" alt="">
+                  <p class="whi">example@huddle.com</p>
+                </div>
+      </div>
+      <div class="mann">
+        <p class="whi">About Us</p>
+        <p class="whi">What we Do</p>
+        <p class="whi">FAQs</p>
+      </div>
+      <div class="mann">
+        <p class="whi">Career</p>
+        <p class="whi">Blog</p>
+        <p class="whi">Contact Us</p>
+      </div>
+      <div class="mann">
+        <button class="ion"><ion-icon name="logo-facebook"></ion-icon></button>
+        <button class="ion"><ion-icon name="logo-twitter"></ion-icon></button>
+        <button class="ion"><ion-icon name="logo-instagram"></ion-icon></button>
+        <p class="whi">&copy; Copyright 2018 Huddle. All rights reserved.</p>
+      </div>
+    </div>
+      </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
